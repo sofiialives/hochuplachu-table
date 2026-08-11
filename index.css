@@ -2991,3 +2991,19 @@ a {
   display: block;
   flex-shrink: 0;
 }
+/* ==== PAY PILLS — payment status badges inside price cells, same visual
+   language as .db-topic-pill, green = оплачено, red = не оплачено ==== */
+.pay-pills { display: flex; flex-direction: column; gap: 6px; align-items: center; margin-top: 10px; }
+.pay-pill {
+  display: inline-flex; align-items: center; gap: 5px;
+  font-size: 9.5px; font-family: var(--mono); letter-spacing: 0.03em; text-transform: uppercase;
+  padding: 3px 9px 3px 7px; border-radius: 100px;
+  white-space: normal; line-height: 1.35; max-width: 100%;
+}
+.pay-pill__dot { width: 4px; height: 4px; border-radius: 50%; flex-shrink: 0; margin-top: 1px; }
+.pay-pill--paid { color: #86EFAC; background: rgba(74, 222, 128, 0.12); border: 1px solid rgba(74, 222, 128, 0.32); }
+.pay-pill--paid .pay-pill__dot { background: var(--green); }
+.pay-pill--unpaid { color: #FF9EA8; background: rgba(255, 92, 108, 0.1); border: 1px solid rgba(255, 92, 108, 0.3); }
+.pay-pill--unpaid .pay-pill__dot { background: #FF5C6C; }
+.pay-pill--partial { color: #FFD98A; background: rgba(255, 191, 71, 0.1); border: 1px solid rgba(255, 191, 71, 0.3); }
+.pay-pill--partial .pay-pill__dot { background: #FFBF47; }
